@@ -12,5 +12,12 @@ module.exports = function(){
         });
     });
 
+    router.get('/viajes', (req,res) => {
+        //Aqui leé la carpeta viajes
+        res.render('viajes',{
+            pagina: 'Próximos Viajes'
+        });
+    });
+
     return router;
 }
