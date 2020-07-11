@@ -6,17 +6,7 @@ block contenido
 
         .row
             .col-md-12
-                blockquote.text-center Lee Sobre Nuestros Clientes y sus Experiencias
-                .row.testimoniales
-                    each item in testimoniales
-                        .col-md-6.col-lg-4.mb-4
-                            .card
-                                .card-body
-                                    blockquote.blockquote
-                                    p.mb-0
-                                        | #{item.mensaje}
-                                    footer.blockquote-footer
-                                        | #{item.nombre}
+                include ../layout/partials/testimoniales
             .col-md-12
                  h2.text-center Agrega un testimonio
                  if(errores)
