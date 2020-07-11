@@ -1,6 +1,7 @@
 // Importar express
 const express = require('express');
 const path= require('path');
+const bodyParser = require('body-parser');
 const routes = require('./routes');
 
 const configs = require('./config');
@@ -41,6 +42,9 @@ app.use((req,res,next)=>{
     
     return next();
 })
+
+//Ejecutamos bodyparser
+app.use(bodyParser.urlencoded({extended: true}));
 
 //Cargar las rutas
 app.use('/', routes());
