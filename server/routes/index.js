@@ -4,8 +4,11 @@ const router = express.Router();
 const Testimonial = require('../models/Testimoniales');
 
 module.exports = function(){
+    //Página de inicio
     router.get('/', (req,res) => {
-        res.render('index');
+        res.render('index',{
+            clase: 'home'
+        });
     });
     
     router.get('/nosotros', (req,res) => {
@@ -31,10 +34,13 @@ module.exports = function(){
             .catch(error => console.log(error));
     });
 
+    //Muestra todos los testimoniales
     router.get('/testimoniales', (req,res) => {
-        res.render('testimoniales',{
-            pagina: 'Testimoniales'
-        });
+        Testimonial.findAll()
+            .then(testimoniales => res.render('testimoniales',{
+                pagina: 'Testimoniales',
+                testimoniales
+            }))
     });
 
     //Insertar en formulario
