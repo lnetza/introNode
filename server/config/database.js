@@ -19,7 +19,7 @@ module.exports = new Sequelize('agenciadeviajes','root','root',{
 })*/
 
 const Sequelize = require('sequelize');
-require('dotenv').config({path: 'variables.env'});
+require('dotenv').config({path: 'variables.env'})
 
 module.exports = new Sequelize(
     process.env.BD_NOMBRE,
@@ -37,7 +37,7 @@ module.exports = new Sequelize(
                     min: 0,
                     acquire: 30000,
                     idle: 10000
-            },
-    operatorsAliases: false
+            }/*,
+    operatorsAliases: false*/
 
 });
