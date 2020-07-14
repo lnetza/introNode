@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Testimonial = require('../models/Testimoniales');
+
 /**COntroladores */
 const nosotrosController = require ('../controllers/nosotrosController');
 const homeController = require('../controllers/homeController');
