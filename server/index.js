@@ -7,13 +7,13 @@ const routes = require('./routes');
 const configs = require('./config');
 
 //Probar conexión
-//const db = require('./config/database');
+const db = require('./config/database');
 
-/*Probar conexión a la BDD
+//Probar conexión a la BDD
 db.authenticate()
     .then(() => console.log('DB Conectada'))
     .catch(error => console.log(error));
-*/
+
 
 
 //Configurar express
@@ -53,4 +53,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 //Cargar las rutas
 app.use('/', routes());
 
-app.listen(3000);
+/**Puerto y host para la appp en heroku */
+const host = process.env.HOST || '0.0.0.0';
+/**hEROKU ASIGNa el puerto */
+const port = process.env.PORT || 3000;
+
+//app.listen(3000);
+app.listen(port,host, ()=> {
+    console.log('El servidor esta funcionando');
+});
