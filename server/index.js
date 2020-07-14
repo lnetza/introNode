@@ -9,6 +9,8 @@ const configs = require('./config');
 //Probar conexión
 const db = require('./config/database');
 
+require('dontenv').config({path: 'variables.env'});
+
 //Probar conexión a la BDD
 db.authenticate()
     .then(() => console.log('DB Conectada'))
