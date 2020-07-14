@@ -7,7 +7,7 @@ exports.consultasHomepage = async (req,res) => {
 
     const viajes = await Viaje.findAll({limit: 3});
 
-    const testimoniales = await Testimonial.findAll({limit: 3})
+    const testimoniales = await Testimonial.findAll({limit: 3});
 
     /* limitado a 3 resultados
     Viaje.findAll({
@@ -22,5 +22,5 @@ exports.consultasHomepage = async (req,res) => {
         clase: 'home',//Clase de css
         viajes,
         testimoniales
-    })    
+    });    
 }       

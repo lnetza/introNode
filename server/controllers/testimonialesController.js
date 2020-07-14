@@ -2,11 +2,11 @@
 const Testimonial = require('../models/Testimoniales');
 
 exports.mostrarTestimoniales = async (req,res) => {
-   const testimoniales = await Testimonial.findAll()
+   const testimoniales = await Testimonial.findAll();
     res.render('testimoniales',{
         pagina: 'Testimoniales',
         testimoniales
-    })
+    });
 }
 
 exports.agregarTestimonial = async (req, res) =>{
@@ -27,7 +27,7 @@ exports.agregarTestimonial = async (req, res) =>{
     //Revisar por errores
     if(errores.length>0){
         //Muestra la vista con errores
-        const testimoniales = await Testimonial.findAll()
+        const testimoniales = await Testimonial.findAll();
         res.render('testimoniales',{
             errores,
             nombre,
@@ -35,7 +35,7 @@ exports.agregarTestimonial = async (req, res) =>{
             mensaje,
             pagina: 'Testimoniales',
             testimoniales
-        })
+        });
     } else{
         //Alamacena en la BD
         Testimonial.create({
