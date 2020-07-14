@@ -42,6 +42,8 @@ app.use((req,res,next)=>{
     //genera variable ruta / testimonial /inicio etc
     res.locals.ruta = req.path;
 
+    //Aqui se usa el middleware
+    //ejecuta el siguiente código y el siguiente y siguiente
     return next();
 })
 
