@@ -9,7 +9,7 @@ const configs = require('./config');
 //Probar conexión
 //const db = require('./config/database');
 
-//require('dotenv').config({path: 'variables.env'});
+require('dotenv').config({path: 'variables.env'});
 
 //Probar conexión a la BDD
 /*
@@ -57,9 +57,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', routes());
 
 /**Puerto y host para la appp en heroku */
-const host = process.env.HOST||'0.0.0.0';
+const host = process.env.HOST || '0.0.0.0';
 /**hEROKU ASIGNa el puerto */
-const port = process.env.PORT||3000;
+const port = process.env.PORT || 3000;
 
 //app.listen(3000);
 app.listen(port,host, ()=> {
