@@ -9,7 +9,7 @@ const configs = require('./config');
 //Probar conexión
 //const db = require('./config/database');
 
-require('dotenv').config({path: 'variables.env'});
+//require('dotenv').config({path: 'variables.env'});
 
 //Probar conexión a la BDD
 /*
