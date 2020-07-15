@@ -12,10 +12,11 @@ const db = require('./config/database');
 require('dotenv').config({path: 'variables.env'});
 
 //Probar conexión a la BDD
+/*
 db.authenticate()
     .then(() => console.log('DB Conectada'))
     .catch(error => console.log(error));
-
+*/
 
 
 //Configurar express
