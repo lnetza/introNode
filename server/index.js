@@ -7,7 +7,7 @@ const routes = require('./routes');
 const configs = require('./config');
 
 //Probar conexión
-const db = require('./config/database');
+//const db = require('./config/database');
 
 require('dotenv').config({path: 'variables.env'});
 
@@ -48,7 +48,7 @@ app.use((req,res,next)=>{
     //Aqui se usa el middleware
     //ejecuta el siguiente código y el siguiente y siguiente
     return next();
-})
+});
 
 //Ejecutamos bodyparser
 app.use(bodyParser.urlencoded({extended: true}));
