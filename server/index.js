@@ -7,16 +7,16 @@ const routes = require('./routes');
 const configs = require('./config');
 
 //Probar conexión
-//const db = require('./config/database');
+const db = require('./config/database');
 
 require('dotenv').config({path: 'variables.env'});
 
 //Probar conexión a la BDD
-/*
+
 db.authenticate()
     .then(() => console.log('DB Conectada'))
-    .catch(error => console.log(error));
-*/
+    .catch(error => console.log('EROR DB:',error));
+
 
 
 //Configurar express
@@ -63,5 +63,5 @@ const port = process.env.PORT || 3000;
 
 //app.listen(3000);
 app.listen(port,host, ()=> {
-    console.log('El servidor esta funcionando');
+    console.log('El servidor esta funcionando')
 });

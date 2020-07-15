@@ -13,6 +13,6 @@ const Testimonial = db.define('testimoniales',{
         type: Sequelize.STRING
     },
 
-})
+});
 
 module.exports = Testimonial;
